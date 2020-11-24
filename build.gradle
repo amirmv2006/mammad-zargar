@@ -1,0 +1,52 @@
+
+ext.mpsMajor = "2020.2"
+ext.mpsMinor = "2"
+ext.jbrSdkVersion = '11_0_8'
+ext.jbrBuild = 'b1129.2'
+
+group 'ir.amv.snippets'
+version '1.0-SNAPSHOT'
+
+buildscript {
+    repositories {
+        maven { url 'https://projects.itemis.de/nexus/content/repositories/mbeddr' }
+        mavenCentral()
+    }
+    dependencies {
+        classpath "de.itemis.mps:mps-gradle-plugin:1.2+"
+        classpath 'de.undercouch:gradle-download-task:4.0.4'
+    }
+}
+
+apply plugin: 'de.undercouch.download'
+
+repositories {
+    maven { url 'https://projects.itemis.de/nexus/content/repositories/mbeddr' }
+    jcenter()
+    ivy {
+        url "https://download.jetbrains.com/mps/$mpsMajor/"
+        layout 'pattern', {
+            artifact "[module]-[revision].[ext]"
+        }
+        metadataSources { // skip downloading ivy.xml
+            artifact()
+        }
+    }
+}
+
+apply plugin: 'generate-models'
+
+configurations {
+    mps
+}
+
+ext.mpsVersion = '2020.1.6'
+
+generate {
+    projectLocation = new File(".")
+    mpsConfig = configurations.mps
+}
+
+dependencies {
+    mps "com.jetbrains:mps:$mpsVersion"
+}
