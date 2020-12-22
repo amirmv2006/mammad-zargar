@@ -1,16 +1,6 @@
 group "ir.amv.snippets"
 version "1.0-SNAPSHOT"
 
-buildscript {
-    repositories {
-        maven(url = "https://projects.itemis.de/nexus/content/repositories/mbeddr")
-        mavenCentral()
-    }
-    dependencies {
-        classpath("generate-models:generate-models.gradle.plugin:1.2+")
-    }
-}
-
 repositories {
 //    maven (url="http://localhost:8081/repository/maven-snapshots/")
     maven(url = "https://projects.itemis.de/nexus/content/repositories/mbeddr")
