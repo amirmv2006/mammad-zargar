@@ -17,7 +17,9 @@ repositories {
     jcenter()
 }
 
-apply(plugin = "generate-models")
+plugins {
+    id("generate-models")
+}
 
 val mpsVersion = "2020.1.6"
 val mps = configurations.create("mps")
