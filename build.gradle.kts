@@ -18,7 +18,7 @@ val mpsPlugins = configurations.create("mpsPlugins")
 dependencies {
     mps("com.jetbrains:mps:$mpsVersion")
     // dependencies are resolved by the model generator app
-//    mpsPlugins(files("/home/amir/Downloads/zargari-0.0.1-20201117.194733-5 (2).zip"))
+    mpsPlugins(files("$projectDir/zargari.zip"))
 }
 
 val mpsLocation = File(buildDir, "mps")
