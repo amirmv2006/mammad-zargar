@@ -11,5 +11,5 @@ repositories {
 }
 
 dependencies {
-    implementation("generate-models:generate-models.gradle.plugin:1.2+")
+    implementation("generate-models:generate-models.gradle.plugin:1.4+")
 }
