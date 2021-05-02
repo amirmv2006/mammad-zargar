@@ -1,14 +1,16 @@
-group "ir.amv.snippets"
-version "1.0-SNAPSHOT"
+plugins {
+    id("generate-models")
+    id("com.google.cloud.artifactregistry.gradle-plugin") version("2.1.1")
+}
+
+group="ir.amv.snippets"
+version="1.0-SNAPSHOT"
 
 repositories {
 //    maven (url="http://localhost:8081/repository/maven-snapshots/")
     maven(url = "https://projects.itemis.de/nexus/content/repositories/mbeddr")
+    maven(url = "artifactregistry://europe-west1-maven.pkg.dev/loco-repo-298115/loco-repo-langs")
     jcenter()
-}
-
-plugins {
-    id("generate-models")
 }
 
 val mpsVersion = "2020.1.6"
@@ -17,8 +19,7 @@ val mpsPlugins = configurations.create("mpsPlugins")
 
 dependencies {
     mps("com.jetbrains:mps:$mpsVersion")
-    // dependencies are resolved by the model generator app
-    mpsPlugins(files("$projectDir/zargari.zip"))
+      mpsPlugins("amirmv2006:Zargari:v1.1")
 }
 
 val mpsLocation = File(buildDir, "mps")
