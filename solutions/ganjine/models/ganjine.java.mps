@@ -3,7 +3,7 @@
   <persistence version="9" />
   <languages>
     <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="11" />
-    <use id="b18e5995-c6de-499b-a97e-b04eeba9dfa1" name="ir.amv.laas.samples.zargari.lang" version="-1" />
+    <use id="7024827d-169d-4b4c-9fcb-bfd9251096f9" name="ir.amv.laas.samples.zargari.lang" version="0" />
   </languages>
   <imports />
   <registry>
@@ -18,8 +18,8 @@
       </concept>
       <concept id="1146644602865" name="jetbrains.mps.baseLanguage.structure.PublicVisibility" flags="nn" index="3Tm1VV" />
     </language>
-    <language id="b18e5995-c6de-499b-a97e-b04eeba9dfa1" name="ir.amv.laas.samples.zargari.lang">
-      <concept id="2392387871137097317" name="ir.amv.laas.samples.zargari.lang.structure.Kezelazeseze" flags="ng" index="399LTM" />
+    <language id="7024827d-169d-4b4c-9fcb-bfd9251096f9" name="ir.amv.laas.samples.zargari.lang">
+      <concept id="6185105629766178387" name="ir.amv.laas.samples.zargari.lang.structure.Kezelazeseze" flags="ng" index="2dFFUv" />
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
@@ -32,7 +32,7 @@
     <node concept="2tJIrI" id="3mlM5zxTC0I" role="jymVt" />
     <node concept="3Tm1VV" id="3mlM5zxTC0F" role="1B3o_S" />
   </node>
-  <node concept="399LTM" id="35o1wtOXIcO">
+  <node concept="2dFFUv" id="5lCPy4lSCyy">
     <property role="TrG5h" value="Amir" />
   </node>
 </model>
