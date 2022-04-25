@@ -29,8 +29,10 @@ val genExt = extensions.getByType<de.itemis.mps.gradle.generate.GeneratePluginEx
     mpsConfig = mps
     pluginLocation = pluginsDir
     plugins = mpsPlugins.dependencies.asSequence()
+        .onEach { logger.lifecycle("My Dear Dependency: {}", it) }
         .flatMap { mpsPlugins.files(it).asSequence() }
         .map { toPlugin(it) }
+        .onEach { logger.lifecycle("My Dear Plugin: {}", it) }
         .toList()
 }
 
